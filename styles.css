@@ -39,6 +39,7 @@ body{
     height: 250px;
     border-radius: 5px;
     padding: 10px;
+    margin: auto;
 } 
 
 
@@ -69,4 +70,91 @@ body{
 .button-area button:active{
     transform: scale(1.1);
     background-color: lightblue;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 1.2rem;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .main-content {
+        height: auto;
+        padding: 8px;
+    }
+
+    .main-content .text-area {
+        font-size: medium;
+        padding: 15px;
+        line-height: 1.4rem;
+        margin-top: 8px;
+    }
+
+    .person {
+        font-size: smaller;
+        margin-top: 8px;
+    }
+
+    .button-area button {
+        font-size: medium;
+        padding: 8px 16px;
+        margin-top: 8px;
+    }
+}
+
+/* Tablet devices (min-width: 601px and max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 70%;
+        height: auto;
+    }
+
+    .header {
+        font-size: 1.4rem;
+        padding: 9px;
+    }
+
+    .main-content {
+        height: auto;
+        padding: 9px;
+    }
+
+    .main-content .text-area {
+        font-size: large;
+        padding: 18px;
+        line-height: 1.45rem;
+    }
+
+    .person {
+        font-size: medium;
+        margin-top: 9px;
+    }
+
+    .button-area button {
+        font-size: large;
+        padding: 9px 18px;
+        margin-top: 9px;
+    }
+}
+
+/* Large screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .container {
+        width: 500px;
+        height: 300px;
+    }
+
+    .main-content {
+        height: 250px;
+    }
 }
