@@ -3,148 +3,353 @@ const quote = document.querySelector('.quote');
 const person = document.querySelector('.person');
 
 
-const quotes = [
-    {
-        quote: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
-        person: "Albert Einstein"
-    },
-    {
-        quote: "The only way to do great work is to love what you do.",
-        person: "Steve Jobs"
-    },
-    {
-        quote: "Innovation distinguishes between a leader and a follower.",
-        person: "Steve Jobs"
-    },
-    {
-        quote: "Your time is limited, don't waste it living someone else's life.",
-        person: "Steve Jobs"
-    },
-    {
-        quote: "Stay hungry, stay foolish.",
-        person: "Steve Jobs"
-    },
-    {
-        quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-        person: "Nelson Mandela"
-    },
-    {
-        quote: "The way to get started is to quit talking and begin doing.",
-        person: "Walt Disney"
-    },
-    {
-        quote: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.",
-        person: "Steve Jobs"
-    },
-    {
-        quote: "If life were predictable it would cease to be life, and be without flavor.",
-        person: "Eleanor Roosevelt"
-    },
-    {
-        quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
-        person: "Martin Luther King Jr."    
-    },
+const quotes = 
+[
+{quote: "He who has a why to live can bear almost any how.", person: "Friedrich Nietzsche"},
+{quote: "Do not seek to follow in the footsteps of the wise; seek what they sought.", person: "Matsuo Basho"},
+{quote: "Difficulties strengthen the mind, as labor does the body.", person: "Seneca"},
+{quote: "It is not what happens to you, but how you react to it that matters.", person: "Epictetus"},
+{quote: "Wealth consists not in having great possessions, but in having few wants.", person: "Epictetus"},
+{quote: "He who is not courageous enough to take risks will accomplish nothing in life.", person: "Muhammad Ali"},
+{quote: "Life is really simple, but we insist on making it complicated.", person: "Confucius"},
+{quote: "Man suffers only because he takes seriously what the gods made for fun.", person: "Alan Watts"},
+{quote: "No man is free who is not master of himself.", person: "Epictetus"},
+{quote: "The soul becomes dyed with the color of its thoughts.", person: "Marcus Aurelius"},
+{quote: "Happiness is the highest good.", person: "Aristotle"},
+{quote: "Do not spoil what you have by desiring what you have not.", person: "Epicurus"},
+{quote: "Life is about making an impact, not making an income.", person: "Kevin Kruse"},
+{quote: "To live is the rarest thing in the world. Most people exist, that is all.", person: "Oscar Wilde"},
+{quote: "It is not death that a man should fear, but he should fear never beginning to live.", person: "Marcus Aurelius"},
+{quote: "The only way to deal with fear is to face it head-on.", person: "Seneca"},
+{quote: "Do not act as if you were going to live ten thousand years.", person: "Marcus Aurelius"},
+{quote: "The art of living is more like wrestling than dancing.", person: "Marcus Aurelius"},
+{quote: "Dwell on the beauty of life. Watch the stars, and see yourself running with them.", person: "Marcus Aurelius"},
+{quote: "It does not matter how slowly you go as long as you do not stop.", person: "Confucius"},
+{quote: "The best revenge is not to be like your enemy.", person: "Marcus Aurelius"},
+{quote: "If you want to improve, be content to be thought foolish and stupid.", person: "Epictetus"},
+{quote: "Things are not bad in themselves, but our opinions about things are.", person: "Epictetus"},
+{quote: "The more you sweat in practice, the less you bleed in battle.", person: "Richard Marcinko"},
+{quote: "Pain is inevitable. Suffering is optional.", person: "Haruki Murakami"},
+{quote: "Happiness depends upon ourselves.", person: "Aristotle"},
+{quote: "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.", person: "Marcus Aurelius"},
+{quote: "The obstacle on the path becomes the path. Within every obstacle is an opportunity.", person: "Seneca"},
+{quote: "The greatest wealth is to live content with little.", person: "Plato"},
+{quote: "A man who dares to waste one hour of time has not discovered the value of life.", person: "Charles Darwin"},
+{quote: "Do not pray for an easy life, pray for the strength to endure a difficult one.", person: "Bruce Lee"},
+{quote: "It is not the man who has too little, but the man who craves more, that is poor.", person: "Seneca"},
+{quote: "The secret of happiness, you see, is not found in seeking more, but in developing the capacity to enjoy less.", person: "Socrates"},
+{quote: "He who conquers himself is the mightiest warrior.", person: "Confucius"},
+{quote: "The mind that is anxious about future events is miserable.", person: "Seneca"},
+{quote: "Everything has beauty, but not everyone sees it.", person: "Confucius"},
+{quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", person: "Winston Churchill"},
+{quote: "Do not let your happiness depend on something you may lose.", person: "Epictetus"},
+{quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people.", person: "Socrates"},
+{quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", person: "Aristotle"},
+{quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "The only true wisdom is in knowing you know nothing.", person: "Socrates"},
+{quote: "Be tolerant with others and strict with yourself.", person: "Marcus Aurelius"},
+{quote: "Associate with people who are likely to improve you.", person: "Seneca"},
+{quote: "Waste no more time arguing what a good man should be. Be one.", person: "Marcus Aurelius"},
+{quote: "The beginning is the most important part of the work.", person: "Plato"},
+{quote: "No man has a good enough memory to be a successful liar.", person: "Quintilian"},
+{quote: "Freedom is the only worthy goal in life.", person: "Epictetus"},
+{quote: "Knowing yourself is the beginning of all wisdom.", person: "Aristotle"},
+{quote: "Luck is what happens when preparation meets opportunity.", person: "Seneca"},
+{quote: "Silence is a source of great strength.", person: "Lao Tzu"},
+{quote: "Time is a created thing. To say 'I don’t have time,' is like saying 'I don’t want to.'", person: "Lao Tzu"},
 
-    {
-        quote: "Do not watch the clock. Do what it does. Keep going.",
-        person: "Sam Levenson"
-    },
+{quote: "Curb your desire—don’t set your heart on so many things.", person: "Epicurus"},
+{quote: "Do every act of your life as though it were the very last act of your life.", person: "Marcus Aurelius"},
+{quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.", person: "Nelson Mandela"},
+{quote: "He who fears death will never do anything worth of a man who is alive.", person: "Seneca"},
+{quote: "Do not be concerned with the praise or blame of others, for their opinions are irrelevant.", person: "Epictetus"},
+{quote: "Do not act as if you were going to live ten thousand years.", person: "Marcus Aurelius"},
+{quote: "Hardships often prepare ordinary people for an extraordinary destiny.", person: "C.S. Lewis"},
+{quote: "Pain is temporary. Quitting lasts forever.", person: "Lance Armstrong"},
+{quote: "Happiness is not something ready-made. It comes from your own actions.", person: "Aristotle"},
+{quote: "A man who has committed a mistake and doesn’t correct it, is committing another mistake.", person: "Confucius"},
+{quote: "Do not watch the clock; do what it does. Keep going.", person: "Sam Levenson"},
+{quote: "Life is really simple, but we insist on making it complicated.", person: "Confucius"},
+{quote: "The mind that is anxious about future events is miserable.", person: "Seneca"},
+{quote: "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.", person: "Marcus Aurelius"},
+{quote: "To enjoy the things we ought and to hate the things we ought has the greatest bearing on excellence of character.", person: "Aristotle"},
+{quote: "Do not let your happiness depend on something you may lose.", person: "Epictetus"},
+{quote: "Freedom is the only worthy goal in life.", person: "Epictetus"},
+{quote: "The secret of happiness is not in seeking more, but in developing the capacity to enjoy less.", person: "Socrates"},
+{quote: "It is not what we have but what we enjoy, that constitutes our abundance.", person: "Epicurus"},
+{quote: "Life is about making an impact, not making an income.", person: "Kevin Kruse"},
+{quote: "Success usually comes to those who are too busy to be looking for it.", person: "Henry David Thoreau"},
+{quote: "Opportunities don't happen. You create them.", person: "Chris Grosser"},
+{quote: "The way to get started is to quit talking and begin doing.", person: "Walt Disney"},
+{quote: "Stay hungry, stay foolish.", person: "Steve Jobs"},
+{quote: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.", person: "Steve Jobs"},
+{quote: "Your time is limited, don't waste it living someone else's life.", person: "Steve Jobs"},
+{quote: "Innovation distinguishes between a leader and a follower.", person: "Steve Jobs"},
+{quote: "Life is like riding a bicycle. To keep your balance, you must keep moving.", person: "Albert Einstein"},
+{quote: "It is not the man who has too little, but the man who craves more, that is poor.", person: "Seneca"},
+{quote: "No great thing is created suddenly.", person: "Epictetus"},
+{quote: "Everything has beauty, but not everyone sees it.", person: "Confucius"},
+{quote: "Wisdom begins in wonder.", person: "Socrates"},
+{quote: "Knowing yourself is the beginning of all wisdom.", person: "Aristotle"},
+{quote: "He who laughs at himself never runs out of things to laugh at.", person: "Epictetus"},
+{quote: "Associate with people who are likely to improve you.", person: "Seneca"},
+{quote: "Better to trip with the feet than with the tongue.", person: "Zeno of Citium"},
+{quote: "The beginning is the most important part of the work.", person: "Plato"},
+{quote: "Give me a place to stand, and I will move the earth.", person: "Archimedes"},
+{quote: "No man has a good enough memory to be a successful liar.", person: "Quintilian"},
+{quote: "The best revenge is not to be like your enemy.", person: "Marcus Aurelius"},
+{quote: "Silence is a source of great strength.", person: "Lao Tzu"},
+{quote: "Time is a created thing. To say 'I don’t have time,' is like saying 'I don’t want to.'", person: "Lao Tzu"},
+{quote: "Do not spoil what you have by desiring what you have not.", person: "Epicurus"},
+{quote: "The art of living is more like wrestling than dancing.", person: "Marcus Aurelius"},
+{quote: "He who conquers himself is the mightiest warrior.", person: "Confucius"},
+{quote: "Luck is what happens when preparation meets opportunity.", person: "Seneca"},
+{quote: "The obstacle on the path becomes the path. Within every obstacle is an opportunity.", person: "Seneca"},
+{quote: "Be tolerant with others and strict with yourself.", person: "Marcus Aurelius"},
+{quote: "Waste no more time arguing what a good man should be. Be one.", person: "Marcus Aurelius"},
+{quote: "Do not pray for an easy life, pray for the strength to endure a difficult one.", person: "Seneca"},
+{quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", person: "Aristotle"},
+{quote: "The only true wisdom is in knowing you know nothing.", person: "Socrates"},
+{quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people.", person: "Socrates"},
+{quote: "If you want to improve, be content to be thought foolish and stupid.", person: "Epictetus"},
+{quote: "Things are not bad in themselves, but our opinions about things are.", person: "Epictetus"},
+{quote: "Difficulties strengthen the mind, as labor does the body.", person: "Seneca"},
 
-    {
-        quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-    },
-
-    {
-        quote: "Believe you can and you're halfway there.",
-        person: "Theodore Roosevelt"
-    },
-
-    {
-        quote: "Act as if what you do makes a difference. It does.",
-        person: "William James"
-    },
-
-    {
-        quote: "What you get by achieving your goals is not as important as what you become by achieving your goals.",
-        person: "Zig Ziglar"
-    },
-
-    {
-        quote: "The future belongs to those who believe in the beauty of their dreams.",
-        person: "Eleanor Roosevelt"
-    },
-
-    {
-        quote: "It does not matter how slowly you go as long as you do not stop.",
-        person: "Confucius"
-    },
-
-    {
-        quote: "Everything you've ever wanted is on the other side of fear.",
-        person: "George Addair"
-    },
-
-    {
-        quote: "Hardships often prepare ordinary people for an extraordinary destiny.",     
-        person: "C.S. Lewis"
-    }, 
-
-    {
-        quote: "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
-        person: "Christian D. Larson"
-    },
-
-    {
-        quote: "Don't watch the clock; do what it does. Keep going.",
-        person: "Sam Levenson"
-    },
-
-
-    {
-        quote: "The only way to do great work is to love what you do.",
-
-        person: "Steve Jobs"
-    },
-
-    {
-        quote: "Success usually comes to those who are too busy to be looking for it.",
-        person: "Henry David Thoreau"
-    },
-
-    {
-        quote: "Opportunities don't happen. You create them.",
-        person: "Chris Grosser"
-    },
-    {
-        quote: "Don't be afraid to give up the good to go for the great.",
-        person: "John D. Rockefeller"
-    },
-
-    {
-        quote: "I find that the harder I work, the more luck I seem to have.",
-        person: "Thomas Jefferson"
-    }, 
-
-    {
-        quote: "Success is not in what you have, but who you are.",
-        person: "Bo Bennett"
-    },
-
-    {
-        quote: "The road to success and the road to failure are almost exactly the same.",
-        person: "Colin R. Davis"
-    },
+{quote: "Do not act in haste, for patience is the companion of wisdom.", person: "St. Augustine"},
+{quote: "The happiness of your life depends upon the quality of your thoughts.", person: "Marcus Aurelius"},
+{quote: "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.", person: "Buddha"},
+{quote: "Be like the cliff against which the waves continually break; but it stands firm and tames the fury of the water around it.", person: "Marcus Aurelius"},
+{quote: "Difficulties are things that show a person what they are.", person: "Epictetus"},
+{quote: "The more one judges, the less one loves.", person: "Honore de Balzac"},
+{quote: "Life is 10% what happens to us and 90% how we react to it.", person: "Charles R. Swindoll"},
+{quote: "He who opens a school door, closes a prison.", person: "Victor Hugo"},
+{quote: "He who has never learned to obey cannot be a good commander.", person: "Aristotle"},
+{quote: "Do not let the behavior of others destroy your inner peace.", person: "Dalai Lama"},
+{quote: "What we achieve inwardly will change outer reality.", person: "Plutarch"},
+{quote: "No man is hurt but by himself.", person: "Diogenes"},
+{quote: "The wise man does not lay up his own treasures. The more he gives to others, the more he has for his own.", person: "Lao Tzu"},
+{quote: "Be kind, for everyone you meet is fighting a hard battle.", person: "Plato"},
+{quote: "Man conquers the world by conquering himself.", person: "Zeno of Citium"},
+{quote: "He who is not contented with what he has would not be contented with what he would like to have.", person: "Socrates"},
+{quote: "Happiness is the meaning and the purpose of life, the whole aim and end of human existence.", person: "Aristotle"},
+{quote: "An investment in knowledge pays the best interest.", person: "Benjamin Franklin"},
+{quote: "Knowing others is intelligence; knowing yourself is true wisdom.", person: "Lao Tzu"},
+{quote: "The greatest wealth is to live content with little.", person: "Plato"},
+{quote: "What lies behind us and what lies before us are tiny matters compared to what lies within us.", person: "Ralph Waldo Emerson"},
+{quote: "No man ever steps in the same river twice, for it’s not the same river and he’s not the same man.", person: "Heraclitus"},
+{quote: "The measure of a man is what he does with power.", person: "Plato"},
+{quote: "It is not length of life, but depth of life.", person: "Ralph Waldo Emerson"},
+{quote: "The first and greatest victory is to conquer yourself.", person: "Plato"},
+{quote: "A gem cannot be polished without friction, nor a man perfected without trials.", person: "Seneca"},
+{quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "A wise man changes his mind, a fool never will.", person: "Spanish Proverb"},
+{quote: "We do not learn from experience… we learn from reflecting on experience.", person: "John Dewey"},
+{quote: "The more man meditates upon good thoughts, the better will be his world and the world at large.", person: "Confucius"},
+{quote: "Dwell on the beauty of life. Watch the stars, and see yourself running with them.", person: "Marcus Aurelius"},
+{quote: "Life is the sum of all your choices.", person: "Albert Camus"},
+{quote: "Man is not worried by real problems so much as by his imagined anxieties about real problems.", person: "Epictetus"},
+{quote: "Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight.", person: "Benjamin Franklin"},
+{quote: "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.", person: "William James"},
+{quote: "It is not what we do, but also what we do not do, for which we are accountable.", person: "Moliere"},
+{quote: "A fool thinks himself to be wise, but a wise man knows himself to be a fool.", person: "William Shakespeare"},
+{quote: "Don’t be afraid to go slowly, be afraid only to stand still.", person: "Chinese Proverb"},
+{quote: "All cruelty springs from weakness.", person: "Seneca"},
+{quote: "Wealth is the slave of a wise man. The master of a fool.", person: "Seneca"},
+{quote: "The best way to predict the future is to create it.", person: "Peter Drucker"},
+{quote: "It is not length of life, but depth of life.", person: "Ralph Waldo Emerson"},
+{quote: "Do not let your fire go out, spark by irreplaceable spark.", person: "Ayn Rand"},
+{quote: "Circumstances don’t make the man, they only reveal him to himself.", person: "Epictetus"},
+{quote: "There is nothing permanent except change.", person: "Heraclitus"},
+{quote: "The happiness of the soul is the ultimate aim of existence.", person: "Epicurus"},
+{quote: "He who is contented is rich.", person: "Lao Tzu"},
+{quote: "Self-control is strength. Right thought is mastery. Calmness is power.", person: "James Allen"},
+{quote: "The mind is everything. What you think you become.", person: "Buddha"},
+{quote: "The greatest way to live with honor in this world is to be what we pretend to be.", person: "Socrates"},
+{quote: "Wealth is the ability to fully experience life.", person: "Henry David Thoreau"},
+{quote: "A man is but the product of his thoughts. What he thinks, he becomes.", person: "Mahatma Gandhi"}, 
 
 
-    {
-        quote: "Don't be distracted by criticism. Remember--the only taste of success some people get is to take a bite out of you.",
-        person: "Zig Ziglar"
-    }
+{quote: "He who knows others is wise; he who knows himself is enlightened.", person: "Lao Tzu"},
+{quote: "The greatest mistake you can make in life is to be continually fearing that you will make one.", person: "Elbert Hubbard"},
+{quote: "Difficulties in life are intended to make us better, not bitter.", person: "Dan Reeves"},
+{quote: "No man can reveal to you aught but that which already lies half asleep in the dawning of your knowledge.", person: "Kahlil Gibran"},
+{quote: "We are shaped by our thoughts; we become what we think.", person: "Buddha"},
+{quote: "Courage is not the absence of fear, but the triumph over it.", person: "Nelson Mandela"},
+{quote: "Do not fear death so much, but rather the inadequate life.", person: "Bertolt Brecht"},
+{quote: "The more a man knows, the more he forgives.", person: "Confucius"},
+{quote: "He who is not contented with what he has would not be contented with what he would like to have.", person: "Socrates"},
+{quote: "Nothing can harm you as much as your own thoughts unguarded.", person: "Buddha"},
+{quote: "Man is the measure of all things.", person: "Protagoras"},
+{quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "The way to gain a good reputation is to endeavor to be what you desire to appear.", person: "Socrates"},
+{quote: "Freedom is nothing else but a chance to be better.", person: "Albert Camus"},
+{quote: "Waste no more time arguing what a good man should be. Be one.", person: "Marcus Aurelius"},
+{quote: "The unexamined life is not worth living.", person: "Socrates"},
+{quote: "Wealth is the ability to fully experience life.", person: "Henry David Thoreau"},
+{quote: "He who has a why to live can bear almost any how.", person: "Friedrich Nietzsche"},
+{quote: "The more one judges, the less one loves.", person: "Honore de Balzac"},
+{quote: "Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight.", person: "Benjamin Franklin"},
+{quote: "Happiness is not something ready-made. It comes from your own actions.", person: "Aristotle"},
+{quote: "A gem cannot be polished without friction, nor a man perfected without trials.", person: "Seneca"},
+{quote: "The greatest way to live with honor in this world is to be what we pretend to be.", person: "Socrates"},
+{quote: "An investment in knowledge pays the best interest.", person: "Benjamin Franklin"},
+{quote: "Be like the cliff against which the waves continually break; but it stands firm and tames the fury of the water around it.", person: "Marcus Aurelius"},
+{quote: "No man is free who is not master of himself.", person: "Epictetus"},
+{quote: "It is not length of life, but depth of life.", person: "Ralph Waldo Emerson"},
+{quote: "Do not pray for an easy life, pray for the strength to endure a difficult one.", person: "Bruce Lee"},
+{quote: "What we achieve inwardly will change outer reality.", person: "Plutarch"},
+{quote: "He who opens a school door, closes a prison.", person: "Victor Hugo"},
+{quote: "Man conquers the world by conquering himself.", person: "Zeno of Citium"},
+{quote: "The mind that is anxious about future events is miserable.", person: "Seneca"},
+{quote: "The first and greatest victory is to conquer yourself.", person: "Plato"},
+{quote: "The measure of a man is what he does with power.", person: "Plato"},
+{quote: "We do not learn from experience… we learn from reflecting on experience.", person: "John Dewey"},
+{quote: "Things are not bad in themselves, but our opinions about things are.", person: "Epictetus"},
+{quote: "The best way to predict the future is to create it.", person: "Peter Drucker"},
+{quote: "The greatest wealth is to live content with little.", person: "Plato"},
+{quote: "All cruelty springs from weakness.", person: "Seneca"},
+{quote: "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.", person: "William James"},
+{quote: "Do not let the behavior of others destroy your inner peace.", person: "Dalai Lama"},
+{quote: "Self-control is strength. Right thought is mastery. Calmness is power.", person: "James Allen"},
+{quote: "The mind is everything. What you think you become.", person: "Buddha"},
+{quote: "Do not watch the clock; do what it does. Keep going.", person: "Sam Levenson"},
+{quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", person: "Winston Churchill"},
+{quote: "It is not what happens to you, but how you react to it that matters.", person: "Epictetus"},
+{quote: "Life is really simple, but we insist on making it complicated.", person: "Confucius"},
+{quote: "Happiness depends upon ourselves.", person: "Aristotle"},
+{quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", person: "Aristotle"},
+{quote: "The only true wisdom is in knowing you know nothing.", person: "Socrates"},
+{quote: "Knowing others is intelligence; knowing yourself is true wisdom.", person: "Lao Tzu"},
+{quote: "Do not let your fire go out, spark by irreplaceable spark.", person: "Ayn Rand"},
+{quote: "He who is contented is rich.", person: "Lao Tzu"},
+{quote: "A man is but the product of his thoughts. What he thinks, he becomes.", person: "Mahatma Gandhi"},
+{quote: "Courage is grace under pressure.", person: "Ernest Hemingway"},
+{quote: "The more one meditates upon good thoughts, the better will be his world and the world at large.", person: "Confucius"}, 
+
+
+{quote: "Do not judge me by my successes, judge me by how many times I fell and got back up again.", person: "Nelson Mandela"},
+{quote: "He who fears being conquered is sure of defeat.", person: "Napoleon Bonaparte"},
+{quote: "The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.", person: "John Milton"},
+{quote: "Happiness is not the absence of problems, it’s the ability to deal with them.", person: "Steve Maraboli"},
+{quote: "Man suffers only because he takes seriously what the gods made for fun.", person: "Alan Watts"},
+{quote: "He who learns but does not think, is lost! He who thinks but does not learn is in great danger.", person: "Confucius"},
+{quote: "The greatest obstacle to living is expectancy, which hangs upon tomorrow and loses today.", person: "Seneca"},
+{quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "Be not afraid of greatness. Some are born great, some achieve greatness, and some have greatness thrust upon them.", person: "William Shakespeare"},
+{quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", person: "Aristotle"},
+{quote: "No one can make you feel inferior without your consent.", person: "Eleanor Roosevelt"},
+{quote: "The mind that is anxious about future events is miserable.", person: "Seneca"},
+{quote: "It is not death that a man should fear, but he should fear never beginning to live.", person: "Marcus Aurelius"},
+{quote: "Courage is not the absence of fear, but the triumph over it.", person: "Nelson Mandela"},
+{quote: "Man conquers the world by conquering himself.", person: "Zeno of Citium"},
+{quote: "Do not act in haste, for patience is the companion of wisdom.", person: "St. Augustine"},
+{quote: "The first and greatest victory is to conquer yourself.", person: "Plato"},
+{quote: "The happiness of your life depends upon the quality of your thoughts.", person: "Marcus Aurelius"},
+{quote: "He who has a why to live can bear almost any how.", person: "Friedrich Nietzsche"},
+{quote: "An investment in knowledge pays the best interest.", person: "Benjamin Franklin"},
+{quote: "Do not pray for an easy life, pray for the strength to endure a difficult one.", person: "Bruce Lee"},
+{quote: "Be like the cliff against which the waves continually break; but it stands firm and tames the fury of the water around it.", person: "Marcus Aurelius"},
+{quote: "No man is free who is not master of himself.", person: "Epictetus"},
+{quote: "The art of living is more like wrestling than dancing.", person: "Marcus Aurelius"},
+{quote: "Curb your desire—don’t set your heart on so many things.", person: "Epicurus"},
+{quote: "Time is a created thing. To say 'I don’t have time,' is like saying 'I don’t want to.'", person: "Lao Tzu"},
+{quote: "Do not spoil what you have by desiring what you have not.", person: "Epicurus"},
+{quote: "Wisdom begins in wonder.", person: "Socrates"},
+{quote: "Knowing yourself is the beginning of all wisdom.", person: "Aristotle"},
+{quote: "He who laughs at himself never runs out of things to laugh at.", person: "Epictetus"},
+{quote: "Associate with people who are likely to improve you.", person: "Seneca"},
+{quote: "Better to trip with the feet than with the tongue.", person: "Zeno of Citium"},
+{quote: "The beginning is the most important part of the work.", person: "Plato"},
+{quote: "Give me a place to stand, and I will move the earth.", person: "Archimedes"},
+{quote: "No man has a good enough memory to be a successful liar.", person: "Quintilian"},
+{quote: "The best revenge is not to be like your enemy.", person: "Marcus Aurelius"},
+{quote: "Silence is a source of great strength.", person: "Lao Tzu"},
+{quote: "The more a man meditates upon good thoughts, the better will be his world and the world at large.", person: "Confucius"},
+{quote: "The greatest wealth is to live content with little.", person: "Plato"},
+{quote: "All cruelty springs from weakness.", person: "Seneca"},
+{quote: "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.", person: "William James"},
+{quote: "Do not let the behavior of others destroy your inner peace.", person: "Dalai Lama"},
+{quote: "Self-control is strength. Right thought is mastery. Calmness is power.", person: "James Allen"},
+{quote: "The mind is everything. What you think you become.", person: "Buddha"},
+{quote: "Do not watch the clock; do what it does. Keep going.", person: "Sam Levenson"},
+{quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", person: "Winston Churchill"},
+{quote: "It is not what happens to you, but how you react to it that matters.", person: "Epictetus"},
+{quote: "Life is really simple, but we insist on making it complicated.", person: "Confucius"},
+{quote: "Happiness depends upon ourselves.", person: "Aristotle"},
+{quote: "The only true wisdom is in knowing you know nothing.", person: "Socrates"},
+{quote: "Knowing others is intelligence; knowing yourself is true wisdom.", person: "Lao Tzu"},
+{quote: "Do not let your fire go out, spark by irreplaceable spark.", person: "Ayn Rand"},
+{quote: "He who is contented is rich.", person: "Lao Tzu"},
+{quote: "A man is but the product of his thoughts. What he thinks, he becomes.", person: "Mahatma Gandhi"},
+{quote: "Circumstances don’t make the man, they only reveal him to himself.", person: "Epictetus"},
+
+
+{quote: "Do not follow where the path may lead. Go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "The best way out is always through.", person: "Robert Frost"},
+{quote: "Life isn’t about finding yourself. Life is about creating yourself.", person: "George Bernard Shaw"},
+{quote: "Knowing others is intelligence; knowing yourself is true wisdom.", person: "Lao Tzu"},
+{quote: "He who has a why to live can bear almost any how.", person: "Friedrich Nietzsche"},
+{quote: "The greatest obstacle to living is expectancy, which hangs upon tomorrow and loses today.", person: "Seneca"},
+{quote: "A man who dares to waste one hour of time has not discovered the value of life.", person: "Charles Darwin"},
+{quote: "Circumstances don’t make the man, they only reveal him to himself.", person: "Epictetus"},
+{quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", person: "Aristotle"},
+{quote: "Man conquers the world by conquering himself.", person: "Zeno of Citium"},
+{quote: "Happiness depends upon ourselves.", person: "Aristotle"},
+{quote: "No man is free who is not master of himself.", person: "Epictetus"},
+{quote: "Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight.", person: "Benjamin Franklin"},
+{quote: "He who fears being conquered is sure of defeat.", person: "Napoleon Bonaparte"},
+{quote: "All cruelty springs from weakness.", person: "Seneca"},
+{quote: "The more a man meditates upon good thoughts, the better will be his world and the world at large.", person: "Confucius"},
+{quote: "Be like the cliff against which the waves continually break; but it stands firm and tames the fury of the water around it.", person: "Marcus Aurelius"},
+{quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", person: "Winston Churchill"},
+{quote: "Do not let your happiness depend on something you may lose.", person: "Epictetus"},
+{quote: "The only true wisdom is in knowing you know nothing.", person: "Socrates"},
+{quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", person: "Ralph Waldo Emerson"},
+{quote: "The first and greatest victory is to conquer yourself.", person: "Plato"},
+{quote: "He who conquers himself is the mightiest warrior.", person: "Confucius"},
+{quote: "Do not pray for an easy life, pray for the strength to endure a difficult one.", person: "Bruce Lee"},
+{quote: "Time is a created thing. To say 'I don’t have time,' is like saying 'I don’t want to.'", person: "Lao Tzu"},
+{quote: "The unexamined life is not worth living.", person: "Socrates"},
+{quote: "Knowing yourself is the beginning of all wisdom.", person: "Aristotle"},
+{quote: "A gem cannot be polished without friction, nor a man perfected without trials.", person: "Seneca"},
+{quote: "Do not spoil what you have by desiring what you have not.", person: "Epicurus"},
+{quote: "Wisdom begins in wonder.", person: "Socrates"},
+{quote: "Silence is a source of great strength.", person: "Lao Tzu"},
+{quote: "Better to trip with the feet than with the tongue.", person: "Zeno of Citium"},
+{quote: "The measure of a man is what he does with power.", person: "Plato"},
+{quote: "The mind is everything. What you think you become.", person: "Buddha"},
+{quote: "He who is contented is rich.", person: "Lao Tzu"},
+{quote: "A man is but the product of his thoughts. What he thinks he becomes.", person: "Mahatma Gandhi"},
+{quote: "Do not watch the clock; do what it does. Keep going.", person: "Sam Levenson"},
+{quote: "Happiness is not something ready-made. It comes from your own actions.", person: "Aristotle"},
+{quote: "The greatest way to live with honor in this world is to be what we pretend to be.", person: "Socrates"},
+{quote: "An investment in knowledge pays the best interest.", person: "Benjamin Franklin"},
+{quote: "Do not act in haste, for patience is the companion of wisdom.", person: "St. Augustine"},
+{quote: "He who learns but does not think, is lost! He who thinks but does not learn is in great danger.", person: "Confucius"},
+{quote: "Do not let the behavior of others destroy your inner peace.", person: "Dalai Lama"},
+{quote: "Self-control is strength. Right thought is mastery. Calmness is power.", person: "James Allen"},
+{quote: "Be not afraid of greatness. Some are born great, some achieve greatness, and some have greatness thrust upon them.", person: "William Shakespeare"},
+{quote: "The best way to predict the future is to create it.", person: "Peter Drucker"},
+{quote: "Life isn’t about finding yourself. Life is about creating yourself.", person: "George Bernard Shaw"},
+{quote: "Man is the measure of all things.", person: "Protagoras"},
+{quote: "Nothing can harm you as much as your own thoughts unguarded.", person: "Buddha"},
+{quote: "The greatest mistake you can make in life is to be continually fearing that you will make one.", person: "Elbert Hubbard"},
+{quote: "Difficulties in life are intended to make us better, not bitter.", person: "Dan Reeves"},
+{quote: "We are shaped by our thoughts; we become what we think.", person: "Buddha"},
+{quote: "Courage is grace under pressure.", person: "Ernest Hemingway"},
+{quote: "Life is the sum of all your choices.", person: "Albert Camus"},
+{quote: "Man is not worried by real problems so much as by his imagined anxieties about real problems.", person: "Epictetus"}
 
 
 
 
-];
+]
+
+
+
+
+
+
 
 
 btn.addEventListener('click', function(){
