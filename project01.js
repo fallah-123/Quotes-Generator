@@ -67,7 +67,83 @@ const quotes = [
     {
         quote: "What you get by achieving your goals is not as important as what you become by achieving your goals.",
         person: "Zig Ziglar"
+    },
+
+    {
+        quote: "The future belongs to those who believe in the beauty of their dreams.",
+        person: "Eleanor Roosevelt"
+    },
+
+    {
+        quote: "It does not matter how slowly you go as long as you do not stop.",
+        person: "Confucius"
+    },
+
+    {
+        quote: "Everything you've ever wanted is on the other side of fear.",
+        person: "George Addair"
+    },
+
+    {
+        quote: "Hardships often prepare ordinary people for an extraordinary destiny.",     
+        person: "C.S. Lewis"
+    }, 
+
+    {
+        quote: "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+        person: "Christian D. Larson"
+    },
+
+    {
+        quote: "Don't watch the clock; do what it does. Keep going.",
+        person: "Sam Levenson"
+    },
+
+
+    {
+        quote: "The only way to do great work is to love what you do.",
+
+        person: "Steve Jobs"
+    },
+
+    {
+        quote: "Success usually comes to those who are too busy to be looking for it.",
+        person: "Henry David Thoreau"
+    },
+
+    {
+        quote: "Opportunities don't happen. You create them.",
+        person: "Chris Grosser"
+    },
+    {
+        quote: "Don't be afraid to give up the good to go for the great.",
+        person: "John D. Rockefeller"
+    },
+
+    {
+        quote: "I find that the harder I work, the more luck I seem to have.",
+        person: "Thomas Jefferson"
+    }, 
+
+    {
+        quote: "Success is not in what you have, but who you are.",
+        person: "Bo Bennett"
+    },
+
+    {
+        quote: "The road to success and the road to failure are almost exactly the same.",
+        person: "Colin R. Davis"
+    },
+
+
+    {
+        quote: "Don't be distracted by criticism. Remember--the only taste of success some people get is to take a bite out of you.",
+        person: "Zig Ziglar"
     }
+
+
+
+
 ];
 
 
